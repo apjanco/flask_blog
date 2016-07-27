@@ -38,6 +38,7 @@ def login():
 	return render_template('login.html', error=error)	
 						
 @app.route('/main')
+# is this correct?  Says "you mush login" all the time
 @login_required
 def main():
 	g.db = connect_db()
